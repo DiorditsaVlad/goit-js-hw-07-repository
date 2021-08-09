@@ -1,11 +1,15 @@
-const elemetns = {
+const elements = {
   incrementButton: document.querySelector(`[data-action='increment']`),
   decrementButton: document.querySelector(`[data-action='decrement']`),
   counter: document.querySelector("#value"),
 };
 
-elemetns.incrementButton.addEventListener("click", () => {
+elements.incrementButton.addEventListener("click", () => {
   increment();
+  updateCounter();
+});
+elements.decrementButton.addEventListener("click", () => {
+  decrement();
   updateCounter();
 });
 
